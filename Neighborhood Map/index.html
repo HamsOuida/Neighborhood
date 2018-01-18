@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Neighborhood Map</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="fonts">
+   </head>
+   <body>
+      <div id="map"></div>
+      <div id="wrapper" class="col-xs-12">
+         <button data-bind="click: clickMe" class="btn" style="float: right;">Menu!</button>         
+         <div  data-bind="css: { visibleLocation }" style="float: right;">
+         </div>
+         <div data-bind="visible: visibleLocation" style="float: right;">
+            <div class="options-box" style="float: right;">
+               <h3> Find What You Need </h3>
+               <div class="input_group">
+                  <input id="inputvalue" type="text" placeholder="Search..." data-bind=" value: location_input">
+                  <button id="search" data-bind="click: search">Search</button>
+               </div>
+
+               <div class="output_places">
+                  <ul  class="list-group" data-bind="foreach: selectlocation">
+                     <li class="list-group-item" data-bind="text:locationname,visible:show, click: $root.clickEventHandlerFunction">
+                     </li>
+                  </ul>
+               </div>
+
+               
+            </div>
+         </div>
+      </div>
+      <script src='js/jquery-2.2.1.min.js'></script>
+      <script src='js/knockout-3.4.2.js'></script>
+      <script src='js/app.js'></script>
+      <script async defer  onerror="HandleError()" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9nFq_FHaUmX8TMQjpYOObQwbyugpirew&v=3&callback=initMap" ></script>
+   </body>
+</html>

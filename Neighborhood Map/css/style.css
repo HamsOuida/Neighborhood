@@ -1,0 +1,63 @@
+html{
+    overflow: scroll;;
+}
+
+html,body{
+    font-family:Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.options-box{
+    width: 250px;
+}
+.input_places input{
+    width: 150px;
+    height: 20px;
+    padding: 10px;
+}
+.input_places button{
+    border: none;
+    height: 25px;
+    background: #5bc0de;
+    color: #ffffff;
+}
+.options-box ul{
+    width: 210px;
+    margin-top: 20px;
+}
+
+#map{
+    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+
+@media(max-width:480px) {
+    #wrapper {
+        padding-left: 10px;
+        padding-top: 50px;
+        
+    }
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 900px;
+        padding-top: 20px;
+        
+        
+        
+    }
+}
+
+
+   
+
+  
+ 
